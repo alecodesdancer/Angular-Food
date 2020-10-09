@@ -1,0 +1,10 @@
+<app-navbar (onOpenModal)="toggleModal()"></app-navbar>
+
+<app-notification></app-notification>
+<app-to-prepare-list
+  *ngIf="showModal"
+  [show]="showModal"
+  (onClose)="toggleModal()"
+></app-to-prepare-list>
+
+<router-outlet></router-outlet>
